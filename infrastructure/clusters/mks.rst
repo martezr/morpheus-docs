@@ -14,7 +14,7 @@ Architecture
 * Monitoring with Prometheus
 * Log forwarding with Fluentbit
 
-**Supported Platforms:**
+**Supported Platforms**
 
 The Morpheus Kubernetes Service (MKS) distribution can be deployed on the following platforms:
 
@@ -23,9 +23,9 @@ The Morpheus Kubernetes Service (MKS) distribution can be deployed on the follow
 * Nutanix
 * VMware vSphere
 
-**Packages:**
+**Packages**
 
-The folowing list of packages are included with a deployment of MKS.
+The folowing list of packages are included with a deployment of MKS:
 
 * Calico
 * Rook
@@ -33,9 +33,9 @@ The folowing list of packages are included with a deployment of MKS.
 * Prometheus
 * Grafana
 
-**Optional Packages:**
+**Optional Packages**
 
-The following list of packages can be optionally added after deploying an MKS cluster.
+The following list of packages can be optionally added after deploying an MKS cluster:
 
 * Istio
 * Helm
@@ -171,9 +171,9 @@ The performance of the Kubernetes cluster can be viewed
 
 Access Grafana:
 
-`
+```
 kubectl port-forward $(kubectl get pods -n monitoring -o name | grep grafana) 3000:3000 -n monitoring
-`
+```
 
 Logging
 ^^^^^^^^^^
