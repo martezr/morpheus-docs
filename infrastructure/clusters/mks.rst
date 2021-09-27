@@ -6,34 +6,32 @@ Morpheus Kubernetes Service (MKS) is a CNCF-certified Kubernetes distribution th
 Architecture
 ^^^^^^^^^^^^
 
-System Component Versions
+Component Versions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
   :widths: auto
   :header-rows: 1
 
-  * - Protocol
-    - Direction
-    - Port Range
-    - Purpose
-    - Source
-  * - TCP
-    - Inbound
-    - 9100
-    - Linux Node Exporter (Metrics)
-    - Morpheus Platform
-  * - TCP
-    - Inbound
-    - 10250
-    - kubelet API
-    - Self, Control plane
-  * - TCP
-    - Inbound
-    - 30000-32767
-    - NodePort Services
-    - All
+  * - Component
+    - Version
+  * - Containerd
+    - 1.4.4
+  * - Calico
+    - 3.17.2
+  * - Grafana
+    - 7.3.4
+  * - Rook
+    - 1.15
+  * - Prometheus
+    - 2.22.1
+  * - Fluentbit
+    - 1.7
 
+Supported Operating Systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Morpheus Kubernetes Service (MKS) uses Ubuntu server as the operating system for control plane and worker nodes.
 
 
 Firewall Ports
