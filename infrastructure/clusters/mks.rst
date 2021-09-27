@@ -27,18 +27,18 @@ The Morpheus Kubernetes Service (MKS) distribution can be deployed on the follow
 
 The folowing list of packages are included with a deployment of MKS:
 
-* Calico
-* Rook
-* Fluentbit
-* Prometheus
-* Grafana
+* Calico: Calico Open Source is a networking and security solution for containers, virtual machines, and native host-based workloads. It supports a broad range of platforms including Kubernetes, OpenShift, Docker EE, OpenStack, and bare metal services.
+* Rook: Rook is an open source cloud-native storage orchestrator, providing the platform, framework, and support for a diverse set of storage solutions to natively integrate with cloud-native environments.
+* Fluentbit: Fluent Bit is an open source Log Processor and Forwarder which allows you to collect any data like metrics and logs from different sources, enrich them with filters and send them to multiple destinations.
+* Prometheus: Prometheus is an open-source systems monitoring and alerting toolkit.
+* Grafana: Grafana is a multi-platform open source analytics and interactive visualization web application.
 
 **Optional Packages**
 
 The following list of packages can be optionally added after deploying an MKS cluster:
 
-* Istio
-* Helm
+* Istio: Istio is an open platform-independent service mesh that provides traffic management, policy enforcement, and telemetry collection.
+* Helm: Helm is the package manager for Kubernetes
 
 Component Versions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
