@@ -171,9 +171,9 @@ The performance of the Kubernetes cluster can be viewed
 
 Access Grafana:
 
-```
-kubectl port-forward $(kubectl get pods -n monitoring -o name | grep grafana) 3000:3000 -n monitoring
-```
+.. code-block:: bash
+
+    kubectl port-forward $(kubectl get pods -n monitoring -o name | grep grafana) 3000:3000 -n monitoring
 
 Logging
 ^^^^^^^^^^
