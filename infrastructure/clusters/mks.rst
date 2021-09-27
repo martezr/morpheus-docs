@@ -3,11 +3,13 @@ Morpheus Kubernetes Service (MKS) Clusters
 
 Morpheus Kubernetes Service (MKS) is a CNCF-certified Kubernetes distribution that includes popular open source projects such as Calico, Prometheus and Grafana to quickly deploy a production ready Kubernetes cluster. MKS supports deployment on public clouds such as AWS, Azure, and GCP as well as on-premises hypervisors such as vSphere, Nutanix, and OpenStack.
 
+Architecture
+^^^^^^^^^^^^
 
-Firewall Ports
-^^^^^^^^^^^^^^^^^^^^^
+System Component Versions
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. list-table:: **Control-plane node(s)**
+.. list-table::
   :widths: auto
   :header-rows: 1
 
@@ -15,7 +17,44 @@ Firewall Ports
     - Direction
     - Port Range
     - Purpose
-    - Used By
+    - Source
+  * - TCP
+    - Inbound
+    - 9100
+    - Linux Node Exporter (Metrics)
+    - Morpheus Platform
+  * - TCP
+    - Inbound
+    - 10250
+    - kubelet API
+    - Self, Control plane
+  * - TCP
+    - Inbound
+    - 30000-32767
+    - NodePort Services
+    - All
+
+
+
+Firewall Ports
+^^^^^^^^^^^^^^^^^^^^^
+
+The Morpheus Kubernetes Service (MKS) cluster requires the following network ports:
+
+.. list-table:: **Control Plane Node(s)**
+  :widths: auto
+  :header-rows: 1
+
+  * - Protocol
+    - Direction
+    - Port Range
+    - Purpose
+    - Source
+  * - TCP
+    - Inbound
+    - 2379-2380
+    - etcd server client API
+    - Self
   * - TCP
     - Inbound
     - 6443
@@ -23,14 +62,9 @@ Firewall Ports
     - All
   * - TCP
     - Inbound
-    - 6783
-    - Weaveworks
-    - 
-  * - TCP
-    - Inbound
-    - 2379-2380
-    - etcd server client API
-    - kube-apiserver, etcd
+    - 9100
+    - Linux Node Exporter (Metrics)
+    - Morpheus Platform
   * - TCP
     - Inbound
     - 10250
@@ -47,7 +81,7 @@ Firewall Ports
     - kube-controller-manager
     - Self
 
-.. list-table:: **Worker node(s)**
+.. list-table:: **Worker Node(s)**
   :widths: auto
   :header-rows: 1
 
@@ -56,6 +90,11 @@ Firewall Ports
     - Port Range
     - Purpose
     - Source
+  * - TCP
+    - Inbound
+    - 9100
+    - Linux Node Exporter (Metrics)
+    - Morpheus Platform
   * - TCP
     - Inbound
     - 10250
