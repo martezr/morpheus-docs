@@ -3,30 +3,27 @@ Morpheus Kubernetes Service (MKS) Clusters
 
 Morpheus Kubernetes Service (MKS) is a CNCF-certified Kubernetes distribution that includes popular open source projects such as Calico, Prometheus and Grafana to quickly deploy a production ready Kubernetes cluster. MKS supports deployment on public clouds such as AWS, Azure, and GCP as well as on-premises hypervisors such as vSphere, Nutanix, and OpenStack.
 
+
 Architecture
 ^^^^^^^^^^^^
+
+.. image:: /images/infrastructure/clusters/mkeArchitecture.png
 
 Component Versions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. list-table::
-  :widths: auto
-  :header-rows: 1
+This release of Morpheus Kubernetes Service (MKS) includes the following software component versions:
 
-  * - Component
-    - Version
-  * - Containerd
-    - 1.4.4
-  * - Calico
-    - 3.17.2
-  * - Grafana
-    - 7.3.4
-  * - Rook
-    - 1.15
-  * - Prometheus
-    - 2.22.1
-  * - Fluentbit
-    - 1.7
+* containerd: 1.4.4
+* calico: 3.17.2
+* grafana: 7.3.4
+* rook: 1.15
+* prometheus: 2.22.1
+* fluentbit: 1.7
+
+
+Packages
+^^^^^^^^
 
 Supported Operating Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
