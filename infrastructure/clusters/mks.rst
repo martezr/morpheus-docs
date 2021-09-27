@@ -9,6 +9,23 @@ Architecture
 
 .. image:: /images/infrastructure/clusters/mkeArchitecture.png
 
+Packages:
+
+The folowing list of packages are included with a deployment of MKS.
+
+* Calico
+* Rook
+* Fluentbit
+* Prometheus
+* Grafana
+
+Optional Packages:
+
+The following list of packages can be optionally added after deploying an MKS cluster.
+
+* Istio
+* Helm
+
 Component Versions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -21,9 +38,6 @@ This release of Morpheus Kubernetes Service (MKS) includes the following softwar
 * prometheus: 2.22.1
 * fluentbit: 1.7
 
-
-Packages
-^^^^^^^^
 
 Supported Operating Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
