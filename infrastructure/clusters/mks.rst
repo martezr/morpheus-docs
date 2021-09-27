@@ -9,7 +9,21 @@ Architecture
 
 .. image:: /images/infrastructure/clusters/mkeArchitecture.png
 
-Packages:
+
+* Networking with Calico
+* Monitoring with Prometheus
+* Log forwarding with Fluentbit
+
+**Supported Platforms:**
+
+The Morpheus Kubernetes Service (MKS) distribution can be deployed on the following platforms:
+
+* AWS
+* GCP
+* Nutanix
+* VMware vSphere
+
+**Packages:**
 
 The folowing list of packages are included with a deployment of MKS.
 
@@ -19,7 +33,7 @@ The folowing list of packages are included with a deployment of MKS.
 * Prometheus
 * Grafana
 
-Optional Packages:
+**Optional Packages:**
 
 The following list of packages can be optionally added after deploying an MKS cluster.
 
@@ -147,3 +161,24 @@ To create a new MKS Kubernetes Cluster:
 
 #. Select :guilabel:`NEXT`
 #. Populate the following:
+
+
+Monitoring
+^^^^^^^^^^
+
+The performance of the Kubernetes cluster can be viewed
+
+
+Access Grafana:
+
+`
+kubectl port-forward $(kubectl get pods -n monitoring -o name | grep grafana) 3000:3000 -n monitoring
+`
+
+Logging
+^^^^^^^^^^
+
+The performance of the Kubernetes cluster can be viewed
+
+
+Access Prometheus:
