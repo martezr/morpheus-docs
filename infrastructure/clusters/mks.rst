@@ -170,9 +170,16 @@ In addition to the built-in cluster and workload monitoring the MKS cluster also
 
 Access Grafana:
 
+#. Run the following command to port forward the local grafana dashboard
+
 .. code-block:: bash
 
     kubectl port-forward $(kubectl get pods -n monitoring -o name | grep grafana) 3000:3000 -n monitoring
+
+#. Open the following address in the web browser: https://localhost:3000
+
+Username: admin
+Password: admin
 
 Logging
 ^^^^^^^^^^
