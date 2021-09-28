@@ -175,13 +175,13 @@ In addition to the built-in cluster and workload monitoring the MKS cluster also
 
 **Grafana**
 
-Grafana allows you to visualize the performance metrics of the Kubernetes cluster.
+Grafana allows you to visualize the performance metrics of the Kubernetes cluster. Several Kubernetes dashboards are included to quickly view detailed metrics from Prometheus. 
 
 #. Run the following command to port forward the local grafana dashboard
 
 .. code-block:: bash
 
-    kubectl port-forward $(kubectl get pods -n monitoring -o name | grep grafana) 3000:3000 -n monitoring
+    kubectl port-forward svc/grafana 3000:3000 -n monitoring
 
 #. Open the following address in the web browser: http://localhost:3000
 
@@ -204,8 +204,6 @@ Password: admin
     kubectl port-forward svc/alertmanager-main -n monitoring 9093:9093
 
 #. Open the following address in the web browser: http://localhost:9093
-
-
 
 Logging
 ^^^^^^^
