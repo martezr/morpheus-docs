@@ -56,7 +56,7 @@ This release of Morpheus Kubernetes Service (MKS) includes the following softwar
 Supported Operating Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Morpheus Kubernetes Service (MKS) uses Ubuntu server as the operating system for control plane and worker nodes.
+Morpheus Kubernetes Service (MKS) uses Ubuntu server as the operating system for control plane and worker nodes.
 
 
 Firewall Ports
@@ -131,8 +131,8 @@ The Morpheus Kubernetes Service (MKS) cluster requires the following network por
 
 
 
-Create an MKS Cluster
-^^^^^^^^^^^^^^^^^^^^^
+Create an MKS Cluster on VMware vSphere
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To create a new MKS Kubernetes Cluster:
 
@@ -166,8 +166,7 @@ To create a new MKS Kubernetes Cluster:
 Monitoring
 ^^^^^^^^^^
 
-The performance of the Kubernetes cluster can be viewed
-
+In addition to the built-in cluster and workload monitoring the MKS cluster also provides access to the Prometheus, Alertmanager and Grafana web interfaces.
 
 Access Grafana:
 
