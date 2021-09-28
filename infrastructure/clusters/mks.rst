@@ -168,7 +168,7 @@ Monitoring & Alerts
 
 In addition to the built-in cluster and workload monitoring the MKS cluster also provides access to the Prometheus, Alertmanager and Grafana web interfaces.
 
-Access Grafana:
+**Grafana**
 
 #. Run the following command to port forward the local grafana dashboard
 
@@ -182,7 +182,7 @@ Username: admin
 Password: admin
 
 
-Access Prometheus:
+**Prometheus:**
 
 .. code-block:: bash
 
@@ -190,7 +190,7 @@ Access Prometheus:
 
 #. Open the following address in the web browser: http://localhost:9090
 
-Access Alertmanager:
+**Alertmanager:**
 
 .. code-block:: bash
 
