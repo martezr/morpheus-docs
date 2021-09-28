@@ -163,8 +163,8 @@ To create a new MKS Kubernetes Cluster:
 #. Populate the following:
 
 
-Monitoring
-^^^^^^^^^^
+Monitoring & Alerts
+^^^^^^^^^^^^^^^^^^^
 
 In addition to the built-in cluster and workload monitoring the MKS cluster also provides access to the Prometheus, Alertmanager and Grafana web interfaces.
 
@@ -176,13 +176,32 @@ Access Grafana:
 
     kubectl port-forward $(kubectl get pods -n monitoring -o name | grep grafana) 3000:3000 -n monitoring
 
-#. Open the following address in the web browser: https://localhost:3000
+#. Open the following address in the web browser: http://localhost:3000
 
 Username: admin
 Password: admin
 
+
+Access Prometheus:
+
+.. code-block:: bash
+
+    kubectl port-forward svc/prometheus-k8s -n monitoring 9090:9090
+
+#. Open the following address in the web browser: http://localhost:9090
+
+Access Alertmanager:
+
+.. code-block:: bash
+
+    kubectl port-forward svc/alertmanager-main -n monitoring 9093:9093
+
+#. Open the following address in the web browser: http://localhost:9093
+
+
+
 Logging
-^^^^^^^^^^
+^^^^^^^
 
 The performance of the Kubernetes cluster can be viewed
 
