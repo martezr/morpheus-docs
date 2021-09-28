@@ -9,7 +9,6 @@ Architecture
 
 .. image:: /images/infrastructure/clusters/mkeArchitecture.png
 
-
 * Networking with Calico
 * Monitoring with Prometheus
 * Log forwarding with Fluentbit
@@ -52,12 +51,9 @@ This release of Morpheus Kubernetes Service (MKS) includes the following softwar
 * prometheus: 2.22.1
 * fluentbit: 1.7
 
-
 Supported Operating Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Morpheus Kubernetes Service (MKS) uses Ubuntu server as the operating system for control plane and worker nodes.
-
 
 Firewall Ports
 ^^^^^^^^^^^^^^^^^^^^^
@@ -129,38 +125,47 @@ The Morpheus Kubernetes Service (MKS) cluster requires the following network por
     - NodePort Services
     - All
 
-
-
 Create an MKS Cluster on VMware vSphere
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To create a new MKS Kubernetes Cluster:
 
-#. Navigate to ``Infrastructure > Clusters``
-#. Select :guilabel:`+ ADD CLUSTER`
-#. Select ``Kubernetes Cluster``
-#. Select a Group for the Cluster
-#. Select :guilabel:`NEXT`
-#. Populate the following:
 
-   CLOUD
-    Select target Cloud
-   CLUSTER NAME
-    Name for the Kubernetes Cluster
-   RESOURCE NAME
-    Name for Kubernetes Cluster resources
-   DESCRIPTION
-    Description of the Cluster
-   VISIBILITY
-    Public
-      Available to all Tenants
-    Private
-      Available to Master Tenant
-   LABELS
-    Internal label(s)
+.. tabs::
 
-#. Select :guilabel:`NEXT`
-#. Populate the following:
+    .. tab:: Morpheus UI
+
+      #. Navigate to ``Infrastructure > Clusters``
+      #. Select :guilabel:`+ ADD CLUSTER`
+      #. Select ``Kubernetes Cluster``
+      #. Select a Group for the Cluster
+      #. Select :guilabel:`NEXT`
+      #. Populate the following:
+
+         CLOUD
+          Select target Cloud
+         CLUSTER NAME
+          Name for the Kubernetes Cluster
+         RESOURCE NAME
+          Name for Kubernetes Cluster resources
+         DESCRIPTION
+          Description of the Cluster
+         VISIBILITY
+          Public
+            Available to all Tenants
+          Private
+            Available to Master Tenant
+         LABELS
+          Internal label(s)
+
+      #. Select :guilabel:`NEXT`
+      #. Populate the following:
+
+
+    .. tab:: CLI
+
+
+    .. tab:: API
 
 
 Monitoring & Alerts
