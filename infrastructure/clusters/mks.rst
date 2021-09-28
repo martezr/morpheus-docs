@@ -170,6 +170,8 @@ In addition to the built-in cluster and workload monitoring the MKS cluster also
 
 **Grafana**
 
+Grafana allows you to visualize the performance metrics of the Kubernetes cluster.
+
 #. Run the following command to port forward the local grafana dashboard
 
 .. code-block:: bash
@@ -182,7 +184,7 @@ Username: admin
 Password: admin
 
 
-**Prometheus:**
+**Prometheus**
 
 .. code-block:: bash
 
@@ -190,7 +192,7 @@ Password: admin
 
 #. Open the following address in the web browser: http://localhost:9090
 
-**Alertmanager:**
+**Alertmanager**
 
 .. code-block:: bash
 
@@ -204,6 +206,3 @@ Logging
 ^^^^^^^
 
 The performance of the Kubernetes cluster can be viewed
-
-
-Access Prometheus:
