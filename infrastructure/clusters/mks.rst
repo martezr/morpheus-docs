@@ -169,6 +169,12 @@ To create a new MKS Kubernetes Cluster:
     .. tab:: API
 
 
+
+Access the MKS Cluster
+^^^^^^^^^^^^^^^^^^^^^^
+
+The MKS cluster can be managed through the Morpheus UI or using common Kubernetes tools like kubectl, lens, octant, etc.
+
 Monitoring
 ^^^^^^^^^^
 
