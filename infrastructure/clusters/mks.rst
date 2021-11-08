@@ -112,6 +112,16 @@ The Morpheus Kubernetes Service (MKS) cluster requires the following network por
     - Source
   * - TCP
     - Inbound
+    - 22
+    - SSH
+    - Morpheus Platform and Management workstations
+  * - UDP
+    - Inbound
+    - 4789
+    - Calico VXLAN
+    - Self and Control Plane
+  * - TCP
+    - Inbound
     - 9100
     - Linux Node Exporter (Metrics)
     - Morpheus Platform
