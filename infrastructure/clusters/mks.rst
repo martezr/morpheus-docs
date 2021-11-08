@@ -1,8 +1,7 @@
 Morpheus Kubernetes Service (MKS) Clusters
 ------------------------------------------
 
-Morpheus Kubernetes Service (MKS) is a CNCF-certified Kubernetes distribution that includes popular open source projects such as Calico, Prometheus and Grafana to quickly deploy a production ready Kubernetes cluster. MKS supports deployment on public clouds such as AWS, Azure, and GCP as well as on-premises hypervisors such as vSphere, Nutanix, and OpenStack.
-
+Morpheus Kubernetes Service (MKS) is a CNCF-certified Kubernetes distribution that supports deployment on public clouds such as AWS, Azure, and GCP as well as on-premises hypervisors such as vSphere, Nutanix, and OpenStack. Morpheus Kubernetes Service (MKS) provides a simple and easy way to deploy a Kubernetes cluster through the Morpheus platform.
 
 Features
 ^^^^^^^^
@@ -30,7 +29,6 @@ The following list of packages can be optionally added after deploying an MKS cl
 
 * **Istio:** Istio is an open platform-independent service mesh that provides traffic management, policy enforcement, and telemetry collection.
 * **Helm:** Helm is the package manager for Kubernetes that simplifies the installation and ugprade of software running on Kubernetes.
-
 
 Supported Platforms
 ^^^^^^^^^^^^^^^^^^^
@@ -212,3 +210,61 @@ Logging
 ^^^^^^^
 
 The performance of the Kubernetes cluster can be viewed
+
+Delete MKS Cluster
+^^^^^^^^^^^^^^^^^^
+
+When you're done using a Kubernetes cluster you can delete the cluster using the Morpheus user interface, the Morpheus API or the Morpheus CLI.
+
+**To delete a Kubernetes cluster with the Morpheus UI**
+
+1. Select **Clusters** from the **Infrastructure** tab drop-down menu
+2. Click on the trash can to the right of the Kubernetes cluster that you want to delete
+3. Type **DELETE** in the text box to confirm that you want to delete the Kubernetes cluster and click **DELETE** to destroy the Kubernetes cluster.
+
+**To delete a Kubernetes cluster with the Morpheus CLI**
+
+1. List all the Kubernetes clusters
+
+   ```bash
+   morpheus clusters list
+   ```
+
+   The ID of the cluster is required to delete the Kubernetes cluster.
+
+   ```bash
+   Morpheus Clusters
+   ==================
+   ID | NAME     | TYPE
+   ---|----------|-------------------
+   25 | k3s      | Kubernetes Cluster
+   24 | kubedemo | Kubernetes Cluster
+   ```
+
+2. Delete the Kubernetes cluster using the ID identified in the previous step.
+
+   ```bash
+   morpheus clusters remove <cluster-id>
+   ```
+
+   Confirm that you want to delete the Kubernetes cluster by entering **yes** when prompted if you would like to remove the cluster.
+
+   ```bash
+   Are you sure you would like to remove the cluster <cluster-name>? (yes/no): yes
+   ```
+
+   The cluster may take a few moments to be completely removed.
+
+   ```bash
+   Cluster <cluster-name> is being removed...
+   ```
+
+**To delete a Kubernetes cluster with the Morpheus API (CURL)**
+
+1. List all the Kubernetes clusters
+
+   ```bash
+   curl 
+   ```
+
+2. T
