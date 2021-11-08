@@ -1,7 +1,7 @@
 Morpheus Kubernetes Service (MKS) Clusters
 ------------------------------------------
 
-Morpheus Kubernetes Service (MKS) is a CNCF-certified Kubernetes distribution that supports deployment on public clouds such as AWS, Azure, and GCP as well as on-premises hypervisors such as vSphere, Nutanix, and OpenStack. Morpheus Kubernetes Service (MKS) provides a simple and easy way to deploy a Kubernetes cluster through the Morpheus platform.
+Morpheus Kubernetes Service (MKS) is a CNCF-certified Kubernetes distribution included with the Morpheus Cloud Management Platform (CMP) and provides a simple and easy way to deploy a Kubernetes cluster on-premises or in the public cloud. The Morpheus Kubernetes Service (MKS) distribution is built upon vanilla upstream Kubernetes and additional components have been added to provide a simplified Kubernetes experience.
 
 Features
 ^^^^^^^^
