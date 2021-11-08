@@ -4,23 +4,15 @@ Morpheus Kubernetes Service (MKS) Clusters
 Morpheus Kubernetes Service (MKS) is a CNCF-certified Kubernetes distribution that includes popular open source projects such as Calico, Prometheus and Grafana to quickly deploy a production ready Kubernetes cluster. MKS supports deployment on public clouds such as AWS, Azure, and GCP as well as on-premises hypervisors such as vSphere, Nutanix, and OpenStack.
 
 
+Features
+^^^^^^^^
+
+* CNCF Certified Distribution
+
 Architecture
 ^^^^^^^^^^^^
 
 .. image:: /images/infrastructure/clusters/mkeArchitecture.png
-
-* Networking with Calico
-* Monitoring with Prometheus
-* Log forwarding with Fluentbit
-
-**Supported Platforms**
-
-The Morpheus Kubernetes Service (MKS) distribution can be deployed on the following platforms:
-
-* AWS
-* GCP
-* Nutanix
-* VMware vSphere
 
 **Packages**
 
@@ -37,7 +29,22 @@ The folowing list of packages are included with a deployment of MKS:
 The following list of packages can be optionally added after deploying an MKS cluster:
 
 * **Istio:** Istio is an open platform-independent service mesh that provides traffic management, policy enforcement, and telemetry collection.
-* **Helm:** Helm is the package manager for Kubernetes
+* **Helm:** Helm is the package manager for Kubernetes that simplifies the installation and ugprade of software running on Kubernetes.
+
+
+Supported Platforms
+^^^^^^^^^^^^^^^^^^^
+
+The Morpheus Kubernetes Service (MKS) distribution can be deployed on the following platforms:
+
+* AWS
+* GCP
+* Nutanix
+* VMware vSphere
+
+Supported Operating Systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Morpheus Kubernetes Service (MKS) uses Ubuntu server as the operating system for control plane and worker nodes.
 
 Component Versions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -50,10 +57,6 @@ This release of Morpheus Kubernetes Service (MKS) includes the following softwar
 * rook: 1.15
 * prometheus: 2.22.1
 * fluentbit: 1.7
-
-Supported Operating Systems
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Morpheus Kubernetes Service (MKS) uses Ubuntu server as the operating system for control plane and worker nodes.
 
 Firewall Ports
 ^^^^^^^^^^^^^^^^^^^^^
@@ -168,8 +171,8 @@ To create a new MKS Kubernetes Cluster:
     .. tab:: API
 
 
-Monitoring & Alerts
-^^^^^^^^^^^^^^^^^^^
+Monitoring
+^^^^^^^^^^
 
 In addition to the built-in cluster and workload monitoring the MKS cluster also provides access to the Prometheus, Alertmanager and Grafana web interfaces.
 
